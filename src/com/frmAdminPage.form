@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.frmAdminPage">
+  <grid id="27dc6" binding="stockForm" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="0" y="2" width="886" height="603"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="d9fc2" class="javax.swing.JButton" binding="sendOrder">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="SEND ORDER FOR DELIVERY"/>
+        </properties>
+      </component>
+      <component id="7c3e0" class="javax.swing.JButton" binding="updateStock">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="UPDATE STOCK"/>
+        </properties>
+      </component>
+      <scrollpane id="e9a45">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none" title="Item Stock List"/>
+        <children>
+          <component id="dcf05" class="javax.swing.JTable" binding="stockTable">
+            <constraints/>
+            <properties>
+              <autoCreateColumnsFromModel value="true"/>
+              <autoCreateRowSorter value="true"/>
+              <columnSelectionAllowed value="false"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="384be" class="javax.swing.JButton" binding="addStock">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="ADD NEW STOCK"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

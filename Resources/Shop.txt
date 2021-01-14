@@ -1,0 +1,10 @@
+101|VanillaCoke|0.99|30
+102|Guitar|299.99|8
+103|MilkyBar|0.75|120
+104|Pringles|3.55|25
+105|Nunchucks|99.99|7
+106|NeoTheOneGlasses|149.29|2
+107|KillBillSocks|8.99|15
+108|TinkyWinkyPlush|13.99|20
+109|Cyberpunk2077|55.99|300
+110|SlowCooker|29.99|69
