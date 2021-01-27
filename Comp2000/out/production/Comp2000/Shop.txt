@@ -8,3 +8,6 @@
 108|TinkyWinkyPlush|13.99|20
 109|Cyberpunk2077|55.99|300
 110|SlowCooker|29.99|69
+111|KnightsOfTheRoundSummonMateria|1000000|1
+112|GymSocks|3.99|7
+113|wellies|9.99|3

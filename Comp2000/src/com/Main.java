@@ -11,9 +11,11 @@ public class Main {
             frmKiosk kiosk = new frmKiosk();
             kiosk.setVisible(true);
             Model model = new Model();
-            Controller controller = new Controller(model);
+            model.addView(kiosk);
+            Controller controller = new Controller(model, kiosk);
             controller.assignController(kiosk);
         }
     }
-
 }
+
+

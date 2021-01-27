@@ -1,13 +1,17 @@
 package com.Model;
 
+import com.IGui;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Model {
 
 private final ArrayList<Stock> stockList = new ArrayList<>();
+private final ArrayList<IGui> viewList = new ArrayList<>();
 
     public Model() {
         readData();
@@ -57,4 +61,10 @@ private final ArrayList<Stock> stockList = new ArrayList<>();
         }
         return null;
     }
+
+    public void addView(IGui view) {
+        viewList.add(view);
+
+    }
+
 }

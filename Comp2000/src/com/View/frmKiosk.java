@@ -2,16 +2,17 @@ package com.View;
 
 
 import com.Controller.Controller;
+import com.IGui;
 import com.Model.Stock;
-import com.frmAdminLogin;
-import com.frmPayment;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-public class frmKiosk extends JFrame {
+public class frmKiosk extends JFrame implements IGui {
     private JButton adminLoginButton;
     private JPanel kioskPanel;
     private JButton payNowButton;
@@ -21,6 +22,9 @@ public class frmKiosk extends JFrame {
     private JLabel lblTotalPrice;
     private JTextArea txtBasket;
     private Controller controller;
+    private float Price = 0;
+    private ArrayList<Stock> Trolley = new ArrayList();
+
 
     public frmKiosk() {
         setContentPane(kioskPanel);
@@ -31,7 +35,7 @@ public class frmKiosk extends JFrame {
         adminLoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frmAdminLogin adminForm = new frmAdminLogin();
+                frmAdminLogin adminForm = new frmAdminLogin(controller);
                 adminForm.setVisible(true);
                 setVisible(false);
 
@@ -40,7 +44,7 @@ public class frmKiosk extends JFrame {
         btnPay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frmPayment paymentSelect = new frmPayment();
+                frmPayment paymentSelect = new frmPayment(Trolley);
                 paymentSelect.setVisible(true);
                 setVisible(false);
             }
@@ -55,6 +59,9 @@ public class frmKiosk extends JFrame {
 
                     if (stock != null) {
                         txtBasket.append(stock.getReciept() + "\n");
+                        Price += stock.getStockPrice();
+                        lblTotalPrice.setText("£" + Price);
+                        Trolley.add(stock);
                     } else {
                         JOptionPane.showMessageDialog(null, "Please input a valid barcode");
                     }
@@ -70,6 +77,10 @@ public class frmKiosk extends JFrame {
 
     public void setController(Controller controller) {
         this.controller = controller;
+
+    }
+    public void update (DefaultTableModel Model){
+
 
     }
 }
